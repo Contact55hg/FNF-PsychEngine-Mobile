@@ -40,6 +40,14 @@ class Spooky extends BaseStage
 	var lightningOffset:Int = 8;
 	override function beatHit()
 	{
+
+            switch(curBeat){
+
+              case 30: lightningStrikeShit();
+
+			    
+	    }
+		
 		if (FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningOffset)
 		{
 			lightningStrikeShit();
@@ -78,7 +86,7 @@ class Spooky extends BaseStage
 
 		if(ClientPrefs.data.flashing) {
 			halloweenWhite.alpha = 0.4;
-			FlxTween.tween(halloweenWhite, {alpha: 0.5}, 0.075);
+			FlxTween.tween(halloweenWhite, {alpha: 1.0}, 0.075);
 			FlxTween.tween(halloweenWhite, {alpha: 0}, 0.25, {startDelay: 0.15});
 		}
 	}
