@@ -43,8 +43,8 @@ class Song
 	public var gameOverSound:String;
 	public var gameOverLoop:String;
 	public var gameOverEnd:String;
-	public var disableNoteRGB:Bool = false;
-	public var speed:Float = 1;
+	public var disableNoteRGB:Bool = true;
+	public var speed:Float = 1.2;
 	public var stage:String;
 	public var player1:String = 'bf';
 	public var player2:String = 'dad';
