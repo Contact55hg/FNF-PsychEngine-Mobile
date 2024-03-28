@@ -33,7 +33,7 @@ import states.TitleState;
 	public var gameOverVibration:Bool = false;
 	public var camZooms:Bool = true;
 	public var hideHud:Bool = false;
-	public var noteOffset:Int = 0;
+	public var noteOffset:Int = 25;
 	public var arrowRGB:Array<Array<FlxColor>> = [
 		[0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],
 		[0xFF00FFFF, 0xFFFFFFFF, 0xFF1542B7],
@@ -45,7 +45,7 @@ import states.TitleState;
 		[0xFF71E300, 0xFFF6FFE6, 0xFF003100],
 		[0xFFFF884E, 0xFFFFFAF5, 0xFF6C0000]];
 
-	public var ghostTapping:Bool = true;
+	public var ghostTapping:Bool = false;
 	public var timeBarType:String = 'Time Left';
 	public var scoreZoom:Bool = true;
 	public var noReset:Bool = false;
@@ -95,9 +95,9 @@ class ClientPrefs {
 	//Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx and Controls.hx
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		//Key Bind, Name for ControlsSubState
-		'note_up'		=> [W, UP],
-		'note_left'		=> [A, LEFT],
-		'note_down'		=> [S, DOWN],
+		'note_up'		=> [F, UP],
+		'note_left'		=> [K, LEFT],
+		'note_down'		=> [J, DOWN],
 		'note_right'	        => [D, RIGHT],
 		
 		'ui_up'			=> [W, UP],
