@@ -99,7 +99,7 @@ class Note extends FlxSprite
 	};
 
 	public var offsetX:Float = 0;
-	public var offsetY:Float = 0;
+	public var offsetY:Float = 40;
 	public var offsetAngle:Float = 0;
 	public var multAlpha:Float = 1;
 	public var multSpeed(default, set):Float = 1;
