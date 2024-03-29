@@ -3085,7 +3085,7 @@ class PlayState extends MusicBeatState
 			               case 'Blink': // Blink Note
 				          boyfriend.stunned = true;
 
-			                  new FlxTimer().start(3.0, () -> { boyfriend.stunned = false; })
+			                  new FlxTimer().start(3.0, () -> { boyfriend.stunned = false; });
 
 						
 				}
