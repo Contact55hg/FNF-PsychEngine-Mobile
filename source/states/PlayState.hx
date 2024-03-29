@@ -3081,13 +3081,7 @@ class PlayState extends MusicBeatState
 							boyfriend.specialAnim = true;
 						}
 			               case 'Blink': // Blink Note
-						if(boyfriend.animOffsets.exists('hurt')){
-
-                                                     boyfriend.playAnim('hurt',true);
-					             boyfriend.specialAnim = true;
-
-							
-						}
+				          boyfriendMap.get(Character.curCharacter).stunned = true;
 				}
 			}
 
