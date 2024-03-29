@@ -3082,6 +3082,7 @@ class PlayState extends MusicBeatState
 						}
 			               case 'Blink': // Blink Note
 				          var noteSpeed: Float = Math.random() * (1 - 0.2) - 1;
+					  note.multSpeed = noteSpeed;
 				}
 			}
 
