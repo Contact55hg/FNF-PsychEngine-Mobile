@@ -3080,6 +3080,14 @@ class PlayState extends MusicBeatState
 							boyfriend.playAnim('hurt', true);
 							boyfriend.specialAnim = true;
 						}
+			               case 'Blink': // Blink Note
+						if(boyfriend.animOffsets.exists('hurt')){
+
+                                                     boyfriend.playAnim('hurt',true);
+					             boyfriend.specialAnim = true;
+
+							
+						}
 				}
 			}
 
