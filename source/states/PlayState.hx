@@ -3086,6 +3086,12 @@ class PlayState extends MusicBeatState
 				          boyfriend.stunned = true;
 
 			                  var disableTimer: FlxTimer = new FlxTimer();
+
+						disableTimer.start(4.0, () -> {
+                                                   boyfriend.stunned = false;
+
+							
+						});
 				}
 			}
 
