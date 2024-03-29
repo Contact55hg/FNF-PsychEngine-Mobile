@@ -3084,12 +3084,12 @@ class PlayState extends MusicBeatState
 							boyfriend.specialAnim = true;
 						}
 			               case 'Blink': // Blink Note
-				          boyfriend.stunned = true;
+				          
 
 			                  disableNotes();
 
 			                  var timer: FlxTimer = new FlxTimer();
-                                          timer.start(3, enableNotes(_), 0);
+                                          timer.start(3, enableNotes, 0);
 						
 				}
 			}
