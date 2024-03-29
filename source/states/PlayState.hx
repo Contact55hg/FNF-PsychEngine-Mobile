@@ -14,6 +14,7 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.util.FlxSort;
 import flixel.util.FlxStringUtil;
 import flixel.util.FlxSave;
+import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.animation.FlxAnimationController;
 import openfl.utils.Assets;
@@ -3085,8 +3086,10 @@ class PlayState extends MusicBeatState
 			               case 'Blink': // Blink Note
 				          boyfriend.stunned = true;
 
-			                  new FlxTimer().start(3.0, () -> { boyfriend.stunned = false; });
+			                  disableNotes();
 
+			                  var timer: FlxTimer = new FlxTimer();
+                                          timer.start(3, enableNotes(_), 0);
 						
 				}
 			}
@@ -3145,6 +3148,18 @@ class PlayState extends MusicBeatState
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('goodNoteHit', [note]);
 
 		if(!note.isSustainNote) invalidateNote(note);
+	}
+
+        public function disableNotes(): Void {
+
+         boyfriend.stunned = true;
+		
+	}
+
+        public function enableNotes(_): Void {
+
+        boyfriend.stunned = false;
+		
 	}
 
 	public function invalidateNote(note:Note):Void {
