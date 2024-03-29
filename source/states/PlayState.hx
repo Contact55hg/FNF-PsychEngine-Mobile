@@ -3055,7 +3055,7 @@ class PlayState extends MusicBeatState
 		if (!note.isSustainNote) invalidateNote(note);
 	}
 
-        public static var notes: Array<Note> = [];
+        
 
 	public function goodNoteHit(note:Note):Void
 	{
@@ -3083,17 +3083,7 @@ class PlayState extends MusicBeatState
 							boyfriend.specialAnim = true;
 						}
 			               case 'Blink': // Blink Note
-				          for i = 0, 3 do
-				             notes[i] = note;
-
-                                             for(noteI in notes){
-
-
-                                               noteI.multAlpha = 0.5;
-						     
-					     }
-						  
-					#end	  
+				          boyfriendMap.get('boyfriend').stunned = true;
 				}
 			}
 
